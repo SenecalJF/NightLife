@@ -1,2 +1,2 @@
 # NightLife
-This app lets you analyse your sleep
+This app analyse your sleep by checking for your movement 
