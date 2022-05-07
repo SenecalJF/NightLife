@@ -16,7 +16,7 @@ export class UserController {
     }
 
     @Post('/login')
-    async Login(@Res() response, @Body() user: User: User){
+    async Login(@Res() response, @Body() user: User){
         const token = await this.userService.signin(user, this.jwtService);
         return response.status(HttpStatus.OK).json(token);
     }
