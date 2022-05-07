@@ -7,9 +7,12 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "start": "lerna run start --stream"
+    "start": "concurrently --kill-others-on-fail \"lerna run start --stream"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0"
   }
 }
