@@ -13,6 +13,9 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 function Copyright(props: any) {
   return (
     <Typography
@@ -22,7 +25,7 @@ function Copyright(props: any) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="#">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -34,13 +37,11 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 function SignUp() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  let navigate = useNavigate();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
   };
 
   return (

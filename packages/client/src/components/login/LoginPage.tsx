@@ -1,13 +1,13 @@
 import Login from "./Login";
-
+import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 
-const LoginPage = () => {
+const LoginPage: React.FC<{ setIsLoggedIn: any }> = ({ setIsLoggedIn }) => {
   return (
     <Grid container sx={{ height: "100vh" }}>
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <Login />
+        <Login setIsLoggedIn={setIsLoggedIn} />
       </Grid>
       <Grid
         item
