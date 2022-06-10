@@ -1,7 +1,6 @@
 // idea : https://github.com/mui/material-ui/tree/v5.5.2/docs/data/material/getting-started/templates/sign-in
 
-import React, { useEffect } from "react";
-import Avatar from "@mui/material/Avatar";
+import React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
